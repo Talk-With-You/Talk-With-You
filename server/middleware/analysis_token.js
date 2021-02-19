@@ -3,5 +3,5 @@ module.exports = require("express-jwt")({
     secret: require("./../config").secretKey,
     algorithms: ['HS256']
 }).unless({
-    path: [/^\/info\//]
+    path: []
 })
