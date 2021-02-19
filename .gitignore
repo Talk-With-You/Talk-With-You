@@ -1,0 +1,2 @@
+# 忽略server中的node_modules文件夹
+/server/node_modules/
