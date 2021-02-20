@@ -11,6 +11,8 @@ const userInfoRouter = require("./router/userinfo");
 const userRouter = require("./router/user");
 // 导入找回密码路由
 const userFindPwd_Router = require("./router/userbyid");
+const post = require("./router/post");
+const reply = require('./router/reply');
 
 // 配置cors中间件为全局
 app.use(require("cors")());
@@ -33,6 +35,8 @@ app.use("/info", userInfoRouter);
 app.use("/logreg", userRouter);
 // 匹配找回密码模块路由
 app.use("/findpwd",userFindPwd_Router);
+app.use("/post", post);
+app.use("/reply", reply);
 
 // 错误级中间件
 app.use(require("./middleware/error_token"));
@@ -41,3 +45,6 @@ app.use(require("./middleware/error_token"));
 app.listen(config.port, config.url, () => {
     console.log(`服务器正常开启！访问http://${config.url}:${config.port}`);
 });
+
+
+
