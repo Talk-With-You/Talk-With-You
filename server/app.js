@@ -7,6 +7,10 @@ const config = require("./config");
 
 // 导入用户信息路由
 const userInfoRouter = require("./router/userinfo");
+// 导入用户登录注册路由
+const userRouter = require("./router/user");
+// 导入找回密码路由
+const userFindPwd_Router = require("./router/userbyid");
 
 // 配置cors中间件为全局
 app.use(require("cors")());
@@ -25,6 +29,10 @@ app.use(require("./middleware/analysis_token"));
 
 // 匹配用户信息模块路由
 app.use("/info", userInfoRouter);
+// 匹配用户登录注册模块路由
+app.use("/logreg", userRouter);
+// 匹配找回密码模块路由
+app.use("/findpwd",userFindPwd_Router);
 
 // 错误级中间件
 app.use(require("./middleware/error_token"));

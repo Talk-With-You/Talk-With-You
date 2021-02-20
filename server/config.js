@@ -13,5 +13,9 @@ module.exports = {
     // 使用的数据库
     database: "twy_db",
     // 解析token字符串秘钥
-    secretKey: 'dream 0_0'
+    secretKey: 'dream 0_0',
+    // 发送源邮箱
+    myEmail: '981846339@qq.com',
+    // 发送源钥匙
+    myKey: "abwvjvhvxemvbcjb"
 };
