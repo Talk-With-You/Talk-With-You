@@ -1,0 +1,12 @@
+.setpost {
+    background-color: skyblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+
+.setpost div {
+    line-height: 100px;
+    font-size: 20px;
+    color: snow;
+}

@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/bootstrap.css">
+    <link rel="stylesheet" href="./assets/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <script src="./assets/layui/layui.all.js"></script>
+    <script src="./assets/template-web.js"></script>
+    <script src="./assets/jquery-3.5.1.js"></script>
+    <!-- 显示帖子的js -->
+    <script src="./js/SetPost.js"></script>
+    <!-- 显示帖子的样式 -->
+    <link rel="stylesheet" href="./css/SetPost.css">
 </head>
+
 <body>
-    
+    <!-- 显示帖子 -->
+    <div class="layui-main SetPost">
+        <script type="text/html" id="html-data">
+            {{ each data }}
+            <a href="#">
+                <div class="layui-row setpost">
+                    <div class="layui-col-md3 setpostlist">
+                        {{ $value.id }}
+                    </div>
+                    <div class="layui-col-md3 setpostlist">
+                        {{ $value.text }}
+                    </div>
+                    <div class="layui-col-md3 setpostlist">
+                        {{ $value.username }}
+                    </div>
+                    <div class="layui-col-md3 ">
+                        {{ $value.datatime | formatTime }}
+                    </div>
+                </div>
+            </a>
+
+            {{ /each }}
+        </script>
+    </div>
+    <!--  -->
+
 </body>
+
 </html>

@@ -128,7 +128,7 @@ router.post("/update/:id", (req, res) => {
 })
 
 //通过论坛标题查询论坛
-router.get("/like", (req, res) => {
+router.post("/like", (req, res) => {
     let like = `%${req.body.text}%`;
     let sqlstr = `SELECT twy_post.id,text,twy_user.username,datatime FROM twy_post JOIN twy_user WHERE twy_post.isdel != 1 and twy_post.text LIKE ?`;
 
